@@ -1,0 +1,343 @@
+
+.formContainer {
+    background-image: linear-gradient(to right, rgb(1,121,122), rgb(38,47,77));    
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .formWrapper {
+      background-color: white;
+      padding: 20px 60px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+  
+      .logo {
+        color: #87bdb9;
+        font-weight: bold;
+        font-size: 24px;
+  
+      }
+  
+      .title {
+        color: #5b858d;
+        font-size: 12px;
+      }
+  
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+  
+        input {
+          padding: 15px;
+          border: none;
+          width: 250px;
+          border-bottom: 1px solid #a3f0b0;
+          &::placeholder {
+            color: rgb(175, 175, 175);
+          }
+          &:focus{
+            outline: none;  
+          }
+        }
+  
+        button {
+          background-color: #8ddad5;
+          color: white;
+          padding: 10px;
+          font-weight: bold;
+          border: none;
+          cursor: pointer;
+        }
+  
+        label {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          color: #365c61;
+          font-size: 12px;
+          cursor: pointer;
+  
+          img {
+            width: 32px;
+          }
+        }
+      }
+      p {
+        color: #5d5b8d;
+        font-size: 12px;
+        margin-top: 10px;
+        
+        .link{
+          color : #50c4bf;
+          text-decoration: none;
+          padding-left: 3px;
+        }
+      }
+    }
+  }
+  
+  .home {
+    // background-image: linear-gradient(to right, rgb(41, 144, 144), rgb(83, 96, 137)); 
+    background-color: whitesmoke;   
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .container {
+      border: 1px solid white;
+      border-radius: 10px;
+      width: 80%;
+      height: 90%;
+      display: flex;
+      overflow: hidden;
+  
+      .sidebar {
+        flex: 1;
+        background-color: white;
+        position: relative;
+  
+        .navbar {
+          display: flex;
+          align-items: center;
+          background-color: #474444;
+          border-right: 0.25px white solid;
+          height: 50px;
+          padding: 10px;
+          justify-content: space-between;
+          color: white;
+          font-weight: bold;
+          
+          .userbox{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+          }
+          
+          .user {
+            display: flex;
+            gap: 90px;
+            justify-content: space-between;
+            width: 100%;
+  
+            img {
+              background-color: #ddddf7;
+              height: 45px;
+              width: 45px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+  
+            button {
+              background-color: white;
+              color: black;
+              border-radius: 8px;
+              font-size: 12px;
+              font-weight: bold;
+              border: none;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .search {
+          // border-bottom: 1px solid gray;
+          border : 0.1px solid rgb(117, 112, 112);
+          margin-bottom: 5px;
+          box-shadow: inset 1px 1px 10px 0.1px #ccc;
+  
+          .searchForm {
+            padding: 10px;
+  
+            input {
+              background-color: transparent;
+              border: none;
+              color: rgb(115, 111, 111);
+              outline: none;
+  
+              &::placeholder {
+                color: rgb(116, 115, 115);
+              }
+            }
+          }
+        }
+  
+        .userChat {
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          color: rgb(12, 12, 12);
+          cursor: pointer;
+          border-bottom: solid 1px #ccc;
+  
+          &:hover {
+            background-color: #706f76;
+          }
+  
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+  
+          .userChatInfo {
+            span {
+              font-size: 18px;
+              font-weight: 500;
+            }
+            p {
+              font-size: 14px;
+              color: rgb(146, 142, 142);
+            }
+          }
+        }
+      }
+      .chat {
+        flex: 2;
+  
+        .chatInfo {
+          height: 50px;
+          background-color: #474444;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px;
+          color: white;
+          font-size: 24px;
+        }
+  
+        .chatIcons {
+          display: flex;
+          gap: 10px;
+  
+          img {
+            height: 24px;
+            cursor: pointer;
+          }
+        }
+  
+        .messages {
+          background-color: #dcdcdc;
+          padding: 10px;
+          height: calc(100% - 160px);
+          overflow: scroll;
+  
+          .message {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+  
+            .messageInfo {
+              display: flex;
+              flex-direction: column;
+              color: rgb(94, 94, 94);
+              font-weight: 300;
+  
+              img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-top: 12px;
+              }
+            }
+            .messageContent {
+              max-width: 80%;
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+  
+              p {
+                background-color: white;
+                // background-image: linear-gradient(to right, rgb(35, 121, 152), rgb(19, 96, 106));
+                padding: 12px 32px 14px 10px;
+                border-radius: 0px 10px 10px 10px;
+                max-width: max-content;
+                position: relative;
+
+                span{
+                  // padding: 4px 4px;
+                  font-size: 12px;
+                  bottom: 0;
+                  position: absolute;
+                  color: rgb(0, 0, 0);
+                }
+              }
+  
+              img {
+                width: 50%;
+              }
+            }
+  
+            &.owner {
+              flex-direction: row-reverse;
+  
+              .messageContent {
+                align-items: flex-end;
+                p {
+                  // background-image: linear-gradient(to right, rgb(0,126,86), rgb(13,116,129));
+                  color: white;
+                  background-color: black;
+                  border-radius: 10px 0px 10px 10px;
+                }
+                span{
+                  color: white;
+                }
+              }
+            }
+          }
+        }
+  
+        .input {
+          height: 50px;
+          background-color: white;
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          box-shadow: inset 1px 1px 1px 1px #ccc;
+  
+          input {
+            width: 100%;
+            border: none;
+            outline: none;
+            color: black;
+            font-size: 18px;
+            background-color: transparent;
+  
+            &::placeholder {
+              color: rgb(143, 142, 142);
+            }
+          }
+  
+          .send {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+  
+            img {
+              height: 24px;
+              cursor: pointer;
+            }
+  
+            button {
+              border: none;
+              border-radius: 4px;
+              padding: 10px 15px;
+              color: white;
+              background-color: #282829;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  } 
